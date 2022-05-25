@@ -5,7 +5,7 @@ using SixLabors.ImageSharp.Drawing.Processing;
 using SixLabors.ImageSharp.Processing;
 
 namespace Mapster.Rendering;
-
+// Geo features
 public struct GeoFeature : BaseShape
 {
     public enum GeoFeatureType
