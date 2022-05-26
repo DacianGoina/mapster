@@ -99,6 +99,232 @@ public struct Coordinate
     }
 }
 
+public enum PropertyKeysEnum
+{
+    Natural = 0,
+    Place = 1,
+    Boundary = 2,
+    Admin_level = 3,
+    Name = 4,
+    Highway = 5,
+    Water = 6,
+    Railway = 7,
+    Landuse = 8,
+    Building = 9,
+    Leisure = 10,
+    Amenity = 11,
+}
+
+public enum PropertyValuesEnum
+{
+    // geo enum types
+    Fell = 0,
+    Grassland = 0,
+    Heath = 0,
+    Moor = 0,
+    Scrub = 0,
+    Wetland = 0,
+    Wood = 1,
+    Tree_row = 1,
+
+    Scree = 2,
+    Rock = 2,
+    Bare_rock = 2,
+
+    Beach = 3,
+    Sand = 3,
+    Administrative = 4,
+    RandomTwo = 13,
+    Motorway = 14,
+    Trunk = 14,
+    Primary = 14,
+    Secondary = 14,
+    Tertiary = 14,
+    Unclassified = 14,
+    Road = 14,
+    Wter = 15,
+
+
+    // GeoFeatureType for Residential
+    Residential = 10,
+    Industrial = 10,
+    Commercial = 10,
+    Cemetery = 10,
+    Square = 10,
+    Construction = 10,
+    Military = 10,
+    Quarry = 10,
+    Brownfield = 10,
+
+    // GeoFeatureType for Forest
+    Forest = 9,
+    Orchard = 9,
+
+    // geoFeatureType for plains
+    Farm = 11,
+    Meadow = 11,
+    Grass = 11,
+    Greenfield = 11,
+    Recreation_ground = 11,
+    Winter_sports = 11,
+    Allotments = 11,
+
+    
+    Reservoir = 12,
+    Basin = 12,
+
+}
+
+
+public class StringToEnumIdConverter
+{
+    public static int getEnumIdKeys(string key)
+    {
+        switch (key)
+        {
+            case ("natural"):
+                return 0;
+            case ("place"):
+                return 1;
+            case ("boundary"):
+                return 2;
+            case ("admin_level"):
+                return 3;
+            case ("name"):
+                return 4;
+            case ("highway"):
+                return 5;
+            case ("water"):
+                return 6;
+            case ("railway"):
+                return 7;
+            case ("landuse"):
+                return 8;
+            case ("building"):
+                return 9;
+            case ("leisure"):
+                return 10;
+            case ("amenity"):
+                return 11;
+            default:
+                return -1;
+        }
+    }
+
+    public static int getEnumIdValues(string key)
+    {
+        switch (key)
+        {
+            case ("fell"):
+                return 0;
+            case ("grassland"):
+                return 0;
+            case ("heath"):
+                return 0;
+            case ("moor"):
+                return 0;
+            case ("scrub"):
+                return 0;
+            case ("wetland"):
+                return 0;
+            case ("wood"):
+                return 1;
+            case ("tree_row"):
+                return 1;
+            case ("bare_rock"):
+                return 2;
+            case ("rock"):
+                return 2;
+            case ("scree"):
+                return 2;
+            case ("sand"):
+                return 3;
+            case ("beach"):
+                return 3;
+            case ("water"):
+                return 15;
+            case ("administrative"):
+                return 4;
+            case ("city"):
+                return 5;
+            case ("town"):
+                return 5;
+            case ("locality"):
+                return 5;
+            case ("hamlet"):
+                return 5;
+
+            case ("military"):
+                return 10;
+            case ("quarry"):
+                return 10;
+            case ("brownfield"):
+                return 10;
+            case ("residential"):
+                return 10;
+            case ("cemetery"):
+                return 10;
+            case ("industrial"):
+                return 10;
+            case ("commercial"):
+                return 10;
+            case ("square"):
+                return 10;
+            case ("construction"):
+                return 10;
+
+
+            case ("forest"):
+                return 9;
+            case ("orchard"):
+                return 9;
+
+
+            case ("farm"):
+                return 11;
+            case ("meadow"):
+                return 11;
+            case ("grass"):
+                return 11;
+            case ("greenfield"):
+                return 11;
+            case ("recreation_ground"):
+                return 11;
+            case ("winter_sports"):
+                return 11;
+            case ("allotments"):
+                return 11;
+
+
+            case ("reservoir"):
+                return 12;
+            case ("basin"):
+                return 12;
+
+            case ("2"):
+                return 13;
+
+            case ("motorway"):
+                return 14;
+            case ("trunk"):
+                return 14;
+            case ("primary"):
+                return 14;
+            case ("secondary"):
+                return 14;
+            case ("tertiary"):
+                return 14;
+            case ("unclassified"):
+                return 14;
+            case ("road"):
+                return 14;
+
+            default:
+                return -1;
+        }
+    }
+}
+
 public enum GeometryType : byte
 {
     Polyline,
