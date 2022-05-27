@@ -120,6 +120,7 @@ public static class TileRenderer
             shapes.Enqueue(geoFeature, geoFeature.ZIndex);
         }
 
+
         if (baseShape != null)
         {
             for (var j = 0; j < baseShape.ScreenCoordinates.Length; ++j)

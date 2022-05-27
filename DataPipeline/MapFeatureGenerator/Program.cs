@@ -110,8 +110,8 @@ public static class Program
                 {
                     Id = way.Id,
                     Coordinates = (totalCoordinateCount, new List<Coordinate>()),
-                    PropertyKeys = (totalPropertyCount, new List<PropertyKeysEnum>(way.Tags.Count)),
-                    PropertyValues = (totalPropertyCount, new List<PropertyValuesEnum>(way.Tags.Count))
+                    PropertyKeys = (totalPropertyCount, new List<PropertyKeysEnum>(way.Tags.Count)), // enum instead of string
+                    PropertyValues = (totalPropertyCount, new List<PropertyValuesEnum>(way.Tags.Count)) // enum (int) instead of string
                 };
 
                 featureIds.Add(way.Id);

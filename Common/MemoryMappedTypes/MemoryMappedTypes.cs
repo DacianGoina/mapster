@@ -118,22 +118,58 @@ public enum PropertyKeysEnum
 public enum PropertyValuesEnum
 {
     // geo enum types
+    Wetland = 0,
+    Heath = 0,
     Fell = 0,
     Grassland = 0,
-    Heath = 0,
     Moor = 0,
     Scrub = 0,
-    Wetland = 0,
     Wood = 1,
-    Tree_row = 1,
+    TreeRow = 1,
 
-    Scree = 2,
     Rock = 2,
-    Bare_rock = 2,
+    Scree = 2,
+    BareRock = 2,
 
     Beach = 3,
     Sand = 3,
     Administrative = 4,
+
+
+    // GeoFeatureType for Forest
+    Forest = 9,
+    Orchard = 9,
+
+    // GeoFeatureType for Residential
+    Residential = 10,
+    Industrial = 10,
+    Commercial = 10,
+    Square = 10,
+    Construction = 10,
+    Brownfield = 10,
+    Military = 10,
+    Quarry = 10,
+    Cemetery = 10,
+
+
+
+    // geoFeatureType for plains
+    Farm = 11,
+    Meadow = 11,
+    Grass = 11,
+    Greenfield = 11,
+    RecreationGround = 11,
+    WinterSport = 11,
+    Allotments = 11,
+
+
+
+
+
+    Reservoir = 12,
+    Basin = 12,
+
+    // other things
     RandomTwo = 13,
     Motorway = 14,
     Trunk = 14,
@@ -142,40 +178,11 @@ public enum PropertyValuesEnum
     Tertiary = 14,
     Unclassified = 14,
     Road = 14,
-    Wter = 15,
-
-
-    // GeoFeatureType for Residential
-    Residential = 10,
-    Industrial = 10,
-    Commercial = 10,
-    Cemetery = 10,
-    Square = 10,
-    Construction = 10,
-    Military = 10,
-    Quarry = 10,
-    Brownfield = 10,
-
-    // GeoFeatureType for Forest
-    Forest = 9,
-    Orchard = 9,
-
-    // geoFeatureType for plains
-    Farm = 11,
-    Meadow = 11,
-    Grass = 11,
-    Greenfield = 11,
-    Recreation_ground = 11,
-    Winter_sports = 11,
-    Allotments = 11,
-
-    
-    Reservoir = 12,
-    Basin = 12,
-
+    Water = 15, 
 }
 
 
+// from string to int 
 public class StringToEnumIdConverter
 {
     public static int getEnumIdKeys(string key)

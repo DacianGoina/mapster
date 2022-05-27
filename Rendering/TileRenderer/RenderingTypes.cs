@@ -26,6 +26,10 @@ public struct GeoFeature : BaseShape
         {
             switch (Type)
             {
+                case GeoFeatureType.Unknown:
+                    return 8;
+                case GeoFeatureType.Desert:
+                    return 9;
                 case GeoFeatureType.Plain:
                     return 10;
                 case GeoFeatureType.Hills:
@@ -34,10 +38,6 @@ public struct GeoFeature : BaseShape
                     return 13;
                 case GeoFeatureType.Forest:
                     return 11;
-                case GeoFeatureType.Desert:
-                    return 9;
-                case GeoFeatureType.Unknown:
-                    return 8;
                 case GeoFeatureType.Water:
                     return 40;
                 case GeoFeatureType.Residential:
@@ -114,6 +114,7 @@ public struct GeoFeature : BaseShape
 
         if (naturalKey != null)
         {
+
             if ((int)naturalKey == 0)
             {
                 Type = GeoFeatureType.Plain;
@@ -134,12 +135,14 @@ public struct GeoFeature : BaseShape
             {
                 Type = GeoFeatureType.Water;
             }
+
         }
 
         ScreenCoordinates = new PointF[c.Length];
         for (var i = 0; i < c.Length; i++)
             ScreenCoordinates[i] = new PointF((float)MercatorProjection.lonToX(c[i].Longitude),
                 (float)MercatorProjection.latToY(c[i].Latitude));
+
     }
 }
 
