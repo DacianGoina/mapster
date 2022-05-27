@@ -13,8 +13,10 @@ public static class TileRenderer
         BaseShape? baseShape = null;
 
 
-        // compare with int values from PropertyKeysEnum
-        // 
+        // now, this part use comparisons between ints (enums), instead of doing operations with string, e.g. StartsWith
+        // this provide time efficiency
+        // also, is more efficient for memory, if the implementation use dictionaries / lists with enums instead of strings 
+      
         var featureType = feature.Type;
         if (feature.Properties.Any(p => p.Key == PropertyKeysEnum.Highway && (int)p.Value == 14))
         {

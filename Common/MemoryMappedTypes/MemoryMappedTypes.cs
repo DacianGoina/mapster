@@ -183,6 +183,7 @@ public enum PropertyValuesEnum
 
 
 // from string to int 
+// still some comparisons between strings here, but I do this to make comparisons between ints (enums) in other place
 public class StringToEnumIdConverter
 {
     public static int getEnumIdKeys(string key)
